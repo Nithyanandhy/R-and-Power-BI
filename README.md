@@ -2,24 +2,24 @@
 
 I've performed various data cleaning, data exploration, and visualization steps using R programming and Power BI to analyze the performance of Hollywood movie​s released in 2007-2012.​. Here's a summary of the steps I've taken:
 
-## Data Loading and Initial Exploration:
+### Data Loading and Initial Exploration:
 - Loaded the tidyverse library.
 - Used view(hwdata) to view the dataset.
 - Checked data types using str(hwdata).
 - Checked dimensions using dim(hwdata).
 - Checked for missing values using colSums(is.na(hwdata))
 
-## Data Cleaning:
+### Data Cleaning:
 
 - Removed rows with missing values using na.omit(hwdata).
 - Removed specific rows based on condition using hwdata %>% filter(!row_number() %in% c(38)).
 - Removed duplicate rows based on the "Film" column using hwdata %>% distinct(Film, .keep_all = TRUE)
   
-## Data Transformation:
+### Data Transformation:
 
 - Rounded "Profitability" and "Worldwide.Gross" columns using round().
   
-## Data Visualization:
+### Data Visualization:
 
 - Used ggplot2 for visualizations.
 - Created a box plot to visualize outliers in "Profitability" and "Worldwide.Gross".
@@ -29,7 +29,7 @@ I've performed various data cleaning, data exploration, and visualization steps 
 - Created scatter plots and bar charts to visualize relationships between various columns.
 ![image](https://github.com/Nithyanandhy/R-and-Power-BI/assets/61016606/f99798ee-2551-46e0-a9b2-153253f4f41a)![image](https://github.com/Nithyanandhy/R-and-Power-BI/assets/61016606/94efd381-bf9e-43b0-9e0e-f5df6e3fb1bd)
 
-## Export the clean data
+### Export the clean data
 
 - Exported the cleaned data to a CSV file named "clean_df.csv" using write.csv().
 
